@@ -4,73 +4,192 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Indigo Inc. Real Estate | Ajmer</title>
-<meta name="description" content="Buy, Sell, Rent & Invest in verified properties with Indigo Inc. Real Estate, Ajmer.">
+<meta name="description" content="Indigo Inc. Real Estate – Buy, Sell, Rent & Invest in Premium Properties in Ajmer.">
 
 <style>
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f6f9;color:#222}
-nav{background:#1e3a8a;padding:15px;display:flex;justify-content:space-between;align-items:center;color:#fff}
-nav a{color:#fff;margin-left:15px;text-decoration:none;font-weight:bold}
-header{padding:60px 20px;text-align:center;background:#e8edff}
-section{padding:40px 20px;max-width:1100px;margin:auto}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{background:#fff;padding:25px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,.1)}
-.btn{display:inline-block;margin:10px;padding:12px 22px;background:#1e3a8a;color:#fff;
-text-decoration:none;border-radius:6px}
-footer{background:#111;color:#fff;text-align:center;padding:15px}
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;
-padding:14px 18px;border-radius:50%;text-decoration:none;font-size:20px}
+:root{
+  --orange:#f97316;
+  --dark:#1f2937;
+}
+body{
+  margin:0;
+  font-family:'Segoe UI',Arial,sans-serif;
+  background:#ffffff;
+  color:#111;
+}
+header{
+  background:#fff;
+  text-align:center;
+  padding:60px 20px;
+  animation:fadeDown 1s ease;
+}
+header h1{
+  margin:0;
+  font-size:36px;
+  color:var(--dark);
+}
+header p{
+  color:#555;
+  font-size:18px;
+}
+section{
+  padding:60px 20px;
+  max-width:1150px;
+  margin:auto;
+}
+h2{
+  text-align:center;
+  margin-bottom:40px;
+  font-size:30px;
+  color:var(--dark);
+}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+.card{
+  background:#fff;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 15px 40px rgba(0,0,0,.08);
+  transition:.4s;
+  animation:popUp .9s ease;
+  cursor:pointer;
+}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 25px 55px rgba(0,0,0,.15);
+}
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+.card h3{
+  margin:15px;
+  color:var(--dark);
+}
+.card p{
+  margin:0 15px 20px;
+  color:#666;
+}
+.highlight{
+  color:var(--orange);
+}
+.contact{
+  background:#f9fafb;
+  border-radius:20px;
+  padding:40px;
+  text-align:center;
+  animation:fadeUp 1s ease;
+}
+.btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:14px 26px;
+  background:var(--orange);
+  color:#fff;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:bold;
+  transition:.3s;
+}
+.btn:hover{
+  background:#ea580c;
+}
+footer{
+  text-align:center;
+  padding:20px;
+  background:#111;
+  color:#fff;
+}
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  padding:16px 18px;
+  border-radius:50%;
+  font-size:22px;
+  text-decoration:none;
+  animation:pulse 1.5s infinite;
+}
+
+/* Animations */
+@keyframes popUp{
+  from{opacity:0;transform:scale(.9)}
+  to{opacity:1;transform:scale(1)}
+}
+@keyframes fadeDown{
+  from{opacity:0;transform:translateY(-30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(37,211,102,.7)}
+  70%{box-shadow:0 0 0 20px rgba(37,211,102,0)}
+  100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
+}
 </style>
 </head>
 
 <body>
 
-<nav>
-  <div><b>Indigo Inc. Real Estate</b></div>
-  <div>
-    <a href="#properties">Explore Properties</a>
-    <a href="#contact">Contact Us</a>
-  </div>
-</nav>
-
 <header>
-  <h1>Your Trusted Real Estate Partner in Ajmer</h1>
-  <p>Buy • Sell • Rent • Invest with Confidence</p>
-  <a class="btn" href="#properties">Explore Properties</a>
-  <a class="btn" href="#contact">Contact Us</a>
+<h1>Indigo Inc. <span class="highlight">Real Estate</span></h1>
+<p>Premium Property Solutions in Ajmer</p>
 </header>
 
 <section>
-  <h2>About Us</h2>
-  <p>
-    Indigo Inc. Real Estate is a professional real estate consultancy in Ajmer.
-    We deal in residential, commercial, plots, land, rental and investment
-    properties with verified listings and transparent deals.
-  </p>
-</section>
+<h2>Our <span class="highlight">Services</span></h2>
+<div class="cards">
 
-<section id="properties">
-  <h2>Our Property Services</h2>
-  <div class="cards">
-    <div class="card">Residential Properties</div>
-    <div class="card">Commercial Shops & Offices</div>
-    <div class="card">Plots & Land</div>
-    <div class="card">Rental Properties</div>
-    <div class="card">Investment Consulting</div>
-  </div>
+<div class="card" onclick="location.href='#contact'">
+<img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
+<h3>Residential Properties</h3>
+<p>Luxury homes & apartments</p>
+</div>
+
+<div class="card" onclick="location.href='#contact'">
+<img src="https://images.unsplash.com/photo-1497366216548-37526070297c">
+<h3>Commercial Properties</h3>
+<p>Shops, offices & showrooms</p>
+</div>
+
+<div class="card" onclick="location.href='#contact'">
+<img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef">
+<h3>Plots & Land</h3>
+<p>Investment & residential plots</p>
+</div>
+
+<div class="card" onclick="location.href='#contact'">
+<img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267">
+<h3>Rental Properties</h3>
+<p>Homes & commercial rentals</p>
+</div>
+
+</div>
 </section>
 
 <section id="contact">
-  <h2>Contact Us</h2>
-  <p><b>Call / WhatsApp:</b> +91-XXXXXXXXXX</p>
-  <p><b>Location:</b> Ajmer, Rajasthan</p>
-  <a class="btn" href="https://wa.me/91XXXXXXXXXX">WhatsApp Now</a>
+<div class="contact">
+<h2>Contact <span class="highlight">Us</span></h2>
+<p><b>📞 Phone / WhatsApp:</b> +91 9829192353</p>
+<p><b>📍 Address:</b> Vaishali Nagar, Ajmer</p>
+<a class="btn" href="https://wa.me/+91-9829192353">WhatsApp Now</a>
+</div>
 </section>
 
 <footer>
-  <p>© 2025 Indigo Inc. Real Estate | Ajmer</p>
+<p>© 2025 Indigo Inc. Real Estate | Ajmer</p>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/91 9829192353">💬</a>
+<a class="whatsapp" href="https://wa.me/+91-9829192353">💬</a>
 
 </body>
 </html>
